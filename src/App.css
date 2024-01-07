@@ -14,7 +14,27 @@
   display: flex;
   gap: 10px; 
 }
+.button-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.button-container button:hover {
+  background-color: #45a049;
+}
+.button-container button:first-child {
+  background-color: #008CBA;
+}
+.button-container button:nth-child(2) {
+  background-color: #FFD700;
+  color: #333;
+}
 table {
   width: 600px; 
   border-collapse: collapse;

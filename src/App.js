@@ -3,14 +3,11 @@ import './App.css';
 
 function App() {
   const [commits, setCommits] = useState([]);
-  const [selectedOption, setSelectedOption] = useState(null);
-
   const filterCommits = (option) => {
     fetch(`http://localhost:3100/api/github?name=${option}`)
       .then(response => response.json())
       .then(data => {
         setCommits(data);
-        setSelectedOption(option);
       })
       .catch(error => console.error(`Error fetching ${option} commits:`, error));
   };
